@@ -1,7 +1,8 @@
 {
     commands: {
         "Configuration:Preferences": {
-            scriptUrl: "./show.js"
+            scriptUrl: "./show.js",
+            readOnly: true
         },
         "Configuration:Preference:Http Request": {
             internal: true,
