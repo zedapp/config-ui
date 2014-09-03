@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family:'Arial';
+                font-size: 14px;
+                margin: 10px;
+                color: #eee;
+                background-color: #444;
+                height: 100%;
+                overflow: hidden;
+            }
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+            h2 {
+                border-bottom: 1px solid #777;
+            }
+            #header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 5px;
+                height: 80px;
+                background-color: #555;
+            }
+            #header img {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 40px;
+            }
+            #header h1 {
+                margin-left: 60px;
+                margin-top: 7px;
+            }
+            #prefs {
+                position: absolute;
+                top: 90px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                overflow: scroll;
+                /*margin-top: 100px;*/
+            }
+            #close {
+                position: fixed;
+                top: 35px;
+                right: 20px;
+                font-size: 14px;
+            }
+            input.string-pref, input.string-list-pref {
+                background-color: #333;
+                border: 1px solid #000;
+                color: #fff;
+                width: 200px;
+                font-size: 14px;
+            }
+            input.num-pref {
+                background-color: #333;
+                border: 1px solid #000;
+                color: #fff;
+                width: 50px;
+                font-size: 14px;
+            }
+            td {
+                padding: 5px;
+                vertical-align: top;
+            }
+            td.name {
+                width: 250px;
+            }
+            div.doc {
+                font-size: 80%;
+                color: #aaa;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <button id="close" class="action-close">Done</button>
+            <img src="zed-logo.png">
+            <h1>Preferences</h1>
+            <p>Changes made here are automatically applied and updated in your Configuration project's <tt>/user.json</tt> file.</p>
+        </div>
+        <div id="prefs"></div>
+        <script src="config.js"></script>
+    </body>
+</html>

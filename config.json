@@ -1,0 +1,35 @@
+{
+    commands: {
+        "Configuration:Preferences": {
+            scriptUrl: "./show.js"
+        },
+        "Configuration:Preference:Http Request": {
+            internal: true,
+            scriptUrl: "/default/command/web_router.js",
+            routes: [
+                {
+                    pattern: "/static(/.*)",
+                    command: "Tools:Static Server:Request",
+                    rewritePath: 1,
+                    fs: "config",
+                    prefix: "/packages/gh/zedapp/config-ui/html"
+                },
+                {
+                    pattern: "/action/(.+)",
+                    command: "Configuration:Preference:Action Request",
+                    rewritePath: 1
+                }
+            ],
+        },
+        "Configuration:Preference:Action Request": {
+            internal: true,
+            scriptUrl: "./web.js"
+        }
+    },
+    keys: {
+        "Configuration:Preferences": {
+            mac: "Command-,",
+            win: "Ctrl-,"
+        }
+    }
+}
