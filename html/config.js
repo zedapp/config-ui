@@ -190,7 +190,7 @@ window.onload = function() {
             html += '</table>';
         });
         if (Object.keys(allPrefs).length > 0) {
-            html += '<h2>Miscelaneous</h2><table>';
+            html += '<h2>Miscellaneous</h2><table>';
             Object.keys(allPrefs).forEach(function(name) {
                 var val = allPrefs[name];
                 addHtmlFor(name, val);
